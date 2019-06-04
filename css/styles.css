@@ -1,0 +1,70 @@
+.wrapper {
+  width: 600px;
+  margin:50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.base {
+  margin: 0 auto;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-size: contain;
+  background-image: url('../images/2.png');
+  background-repeat: no-repeat;
+}
+.disk {
+  position: absolute;
+  background-image: url(../images/1.png);
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 50px;
+  left: 50px;  
+  z-index: 0;
+}
+
+.needle {
+  position: absolute;
+  top:40px;
+  left:0;
+  background-image: url(../images/3.png);
+  width: 100px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.animated {
+  animation: rotate linear 2s infinite;
+}
+.animated-needle {
+  transform: skewX(20deg);
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+button {
+  margin: 20px auto;
+  background-image: url(../images/Button.png);
+  width: 200px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+span {
+  text-align: center;
+  color: brown;
+}
+
+/* audio {
+  visibility: hidden;
+} */
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* @keyframes moveNeedle {
+  from {transform: skewX(0deg);}
+  to {transform: skewX(30deg);}
+} */
