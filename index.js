@@ -4,7 +4,7 @@ let audio = document.querySelector('audio');
 let span = document.querySelector('span');
 let needle = document.querySelector('.needle');
 
-console.log(audio.ended)
+
 audio.addEventListener('timeupdate', () => {
   span.innerText = `${Math.round(audio.currentTime*1000)} ms`;
   let angle = 40 * audio.currentTime / audio.duration;
